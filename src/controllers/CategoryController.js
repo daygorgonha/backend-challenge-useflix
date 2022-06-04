@@ -21,5 +21,13 @@ module.exports = {
     const category = await Category.create({ name, description });
 
     return res.json(category);
+  },
+
+  async delete(req, res) {
+    const { id } = req.params;
+
+    await Category.destroy({ where: { id } });
+
+    return res.send();
   }
 }
