@@ -43,6 +43,24 @@ module.exports = {
     return res.json(movie);
   },
 
+  async update(req, res) {
+    const { id } = req.params;
+
+    const movie = await Movie.findByPk(id);
+
+    if(!movie) {
+      return res.status(404).json({ error: 'Movie not found!'})
+    }
+
+    const movieUpdate = await Movie.update(req.body, {
+      where: { id },
+      returning: true,
+      plain: true
+    });
+
+    return res.json(movieUpdate[1].dataValues);
+  },
+
   async delete(req, res) {
     const { id } = req.params;
 

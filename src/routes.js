@@ -12,6 +12,7 @@ routes.delete('/categories/:id', CategoryController.delete);
 
 routes.get('/movies', MovieController.index);
 routes.get('/movies/:id', MovieController.show);
+routes.put('/movies/:id', MovieController.update);
 routes.post('/movies', MovieController.store);
 routes.delete('/movies/:id', MovieController.delete);
 
