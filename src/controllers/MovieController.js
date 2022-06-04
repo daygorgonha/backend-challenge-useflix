@@ -23,6 +23,10 @@ module.exports = {
 
     const movie = await Movie.findByPk(id);
 
+    if(!movie) {
+      return res.status(404).json({ error: 'Movie not found!'})
+    }
+
     return res.json(movie);
   },
 
@@ -41,6 +45,12 @@ module.exports = {
 
   async delete(req, res) {
     const { id } = req.params;
+
+    const movie = await Movie.findByPk(id);
+
+    if(!movie) {
+      return res.status(400).json({ error: 'Movie not found!'})
+    }
 
     await Movie.destroy({ where: { id } });
 
