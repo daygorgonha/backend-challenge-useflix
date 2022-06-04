@@ -9,4 +9,6 @@ const connection = new Sequelize(dbconfig);
 User.init(connection);
 Movie.init(connection);
 
+Movie.associate(connection.models);
+
 module.exports = connection;
