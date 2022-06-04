@@ -9,6 +9,10 @@ class Category extends Model {
       sequelize
     })
   }
+
+  static associate(models) {
+    this.hasMany(models.Movie, { foreignKey: 'category_id', as: 'category' });
+  }
 }
 
 module.exports = Category;

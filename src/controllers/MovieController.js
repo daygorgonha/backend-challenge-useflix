@@ -2,8 +2,18 @@ const Movie = require('../models/Movie');
 
 module.exports = { 
   async index(req, res) {
-    const movies = await Movie.findAll();
-
+    const movies = await Movie.findAll({
+      attributes: [
+        'id',
+        'name',
+        'classification',
+        'created_at',
+        'updated_at'
+      ],
+      include: { association: 'category', attributes: ['name'],
+      } 
+    });
+     
     return res.json(movies);
   },
 
