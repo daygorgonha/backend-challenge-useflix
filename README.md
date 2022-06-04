@@ -1,5 +1,5 @@
 <div align="center">
- <img src="./assets/logo-useflix.png" width="280" height="280" alt="useflix"/>
+ <img src="./assets/logo-useflix.png" alt="useflix"/>
 </div>
 
 <h1 align="center"> Desafio Backend UseFlix 🍿 </h1>
