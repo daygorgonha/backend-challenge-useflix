@@ -7,6 +7,14 @@ module.exports = {
     return res.json(category);
   },
 
+  async show(req, res) {
+    const { id } = req.params;
+
+    const category = await Category.findByPk(id);
+
+    return res.json(category);
+  },
+
   async store(req, res) {
     const { name, description } = req.body;
 
