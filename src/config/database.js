@@ -1,4 +1,3 @@
-
 module.exports = {
   dialect: 'postgres',
   protocol: 'postgres',
@@ -7,7 +6,7 @@ module.exports = {
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE,
   dialectOptions: {
-    ssl: true,
+    ssl: parseInt(process.env.ENABLE_SSL) === 1 ? true : false,
     rejectUnauthorized: false
   },
   define: {
