@@ -1,6 +1,6 @@
 module.exports = {
   dialect: 'postgres',
-  host: 'localhost',
+  host: 'database',
   username: 'useflix',
   password: 'useflix',
   database: 'useflix',

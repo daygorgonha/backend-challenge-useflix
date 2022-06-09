@@ -54,16 +54,42 @@ As seguintes ferramentas foram usadas na construção do projeto:
 > cd backend-challenge-useflix
 ```
 
+### Execução local
+<br/>
+
+
 - Instale as dependências com o Yarn
 
 ```
-yarn
+> yarn
 ```
 
 - Execute o projeto
 
 ```
-yarn dev
+> yarn dev
+```
+
+- Execute a migration
+
+```
+> yarn sequelize db:migrate
+```
+<br/>
+
+### Execução com docker-compose
+<br/>
+
+- Execute o docker-compose
+
+```
+> sudo docker-compose up
+```
+
+- Execute a migration
+
+```
+> sudo docker-compose run --rm app npx sequelize-cli db:migrate
 ```
 <br/>
 
