@@ -5,7 +5,8 @@
   "author": "Dayane B X Gorgonha <dayanebismark18@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
