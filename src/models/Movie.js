@@ -5,6 +5,7 @@ class Movie extends Model {
     super.init({
       name: DataTypes.STRING,
       classification: DataTypes.INTEGER,
+      description: DataTypes.STRING
     }, {
       sequelize
     })

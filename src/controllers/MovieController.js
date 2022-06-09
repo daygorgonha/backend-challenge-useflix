@@ -7,6 +7,7 @@ module.exports = {
         'id',
         'name',
         'classification',
+        'description',
         'created_at',
         'updated_at'
       ],
@@ -32,12 +33,13 @@ module.exports = {
 
 
   async store(req, res) {
-    const { category_id, name, classification } = req.body;
+    const { category_id, name, classification, description } = req.body;
 
     const movie = await Movie.create({ 
       category_id, 
       name, 
       classification,
+      description
     });
 
     return res.json(movie);
