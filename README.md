@@ -5,7 +5,7 @@
 <h1 align="center"> Desafio Backend UseFlix 🍿 </h1>
 
 <h4 align="center"> 
-	  Status: Em andamento 🚀 
+	  Status: Concluido 🚀 
 </h4>
 
 <br />
