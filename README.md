@@ -54,6 +54,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 > cd backend-challenge-useflix
 ```
 
+- Configure o environment
+
+```
+> cp .env.example .env 
+```
+
 ### Execução local
 <br/>
 
